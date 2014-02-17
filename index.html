@@ -43,9 +43,9 @@ of
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
 $(".random").click(function() {
-   var random = Math.floor(Math.random()*$('#company option').length);
+   var random = Math.floor(Math.random()*2*$('#company option').length);
    $('#company option').eq(random).attr('selected', 'selected');
-   Math.floor(Math.random()*$('#customer option').length);
+   Math.floor(Math.random()*2*$('#customer option').length);
    $('#customer option').eq(random).attr('selected', 'selected');
 });
 </script>
