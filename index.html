@@ -90,6 +90,8 @@ of
 $(".random").click(function() {
    var random = Math.floor(Math.random()*$('#company option').length);
    $('#company option').eq(random).attr('selected', 'selected');
+   Math.floor(Math.random()*$('#customer option').length);
+   $('#customer option').eq(random).attr('selected', 'selected');
 });
 </script>
 </body>
