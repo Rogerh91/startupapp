@@ -87,10 +87,9 @@ of
 <center><div class="random">Random time!</div></center>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
-$("#random").click(function() {
+$(".random").click(function() {
    var random = Math.floor(Math.random()*$('#company option').length);
    $('#company option').eq(random).attr('selected', 'selected');
-
 });
 </script>
 </body>
