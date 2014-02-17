@@ -4,14 +4,63 @@
 	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
 	<meta name="author" content="Roger Huang">
 	<meta charset="UTF-8">
+	<style type="text/css">
+.random {
+	-moz-box-shadow:inset 0px 1px 0px 0px #dcecfb;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #dcecfb;
+	box-shadow:inset 0px 1px 0px 0px #dcecfb;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #80b5ea) );
+	background:-moz-linear-gradient( center top, #bddbfa 5%, #80b5ea 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#80b5ea');
+	background-color:#bddbfa;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Georgia;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:40px;
+	line-height:40px;
+	width:166px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #528ecc;
+}
+.random:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #80b5ea), color-stop(1, #bddbfa) );
+	background:-moz-linear-gradient( center top, #80b5ea 5%, #bddbfa 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#80b5ea', endColorstr='#bddbfa');
+	background-color:#80b5ea;
+}.random:active {
+	position:relative;
+	top:1px;
+}
+	
+</style>
+/* This button was generated using CSSButtonGenerator.com */
 </head>
 
+<html>
 <body>
 <center><h2>We are...</h2></center>
 <br/>
 <center>
 the
-<select>
+<select id="company">
   <option value="uber">Uber</option>
   <option value="tinder">Tinder</option>
   <option value="airbnb">AirBNB</option>
@@ -20,7 +69,7 @@ the
   <option value="kayak">Kayak</option>
 </select>
 of
-<select>
+<select id="customer">
   <option value="hipsters">hipsters</option>
   <option value="marijuana">marijuana</option>
   <option value="prostitutes">prostitutes</option>
@@ -34,4 +83,16 @@ of
   <option value="gamification">gamification</option>
   <option value="3D printing">3D printing</option>
 </select>! 
-</center> 
+</center>
+<br/>
+<center><div class="random"></div></center>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function() {
+   var random = Math.floor(Math.random()*$('#test option').length);
+   $('#test option').eq(random).attr('selected', 'selected');
+
+});
+</script>
+</body>
+</html>
